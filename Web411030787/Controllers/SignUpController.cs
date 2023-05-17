@@ -30,10 +30,10 @@ namespace Web411030787.Controllers
             {
                 ViewBag.PasswordMessage = "請輸入密碼";
             }
-
-
-
-
+            if (!name.IsNullOrWhiteSpace() && !account.IsNullOrWhiteSpace() && !password.IsNullOrWhiteSpace())
+            {
+                ViewBag.Message = "註冊成功";
+            }
 
             return View();
         }
